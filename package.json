@@ -1,7 +1,7 @@
 {
-  "name": "@appcues/react-native",
-  "version": "2.1.3",
-  "description": "Appcues React Native Module for Android and iOS mobile apps",
+  "name": "@appcues/segment-react-native",
+  "version": "0.1.0-beta1",
+  "description": "Segment destination plugin for Appcues.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -10,13 +10,7 @@
   "files": [
     "src",
     "lib",
-    "android",
-    "ios",
-    "cpp",
-    "appcues-react-native.podspec",
     "!lib/typescript/example",
-    "!android/build",
-    "!ios/build",
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__"
@@ -36,13 +30,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/appcues/appcues-react-native-module",
+  "repository": "https://github.com/appcues/segment-appcues-react-native",
   "author": "Appcues <mobile@appcues.com> (https://www.appcues.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/appcues/appcues-react-native-module/issues"
+    "url": "https://github.com/appcues/segment-appcues-react-native/issues"
   },
-  "homepage": "https://github.com/appcues/appcues-react-native-module#readme",
+  "homepage": "https://github.com/appcues/segment-appcues-react-native#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
