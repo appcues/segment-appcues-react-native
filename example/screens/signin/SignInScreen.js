@@ -1,19 +1,21 @@
 import React, { useContext } from 'react';
 import { View } from 'react-native';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
-import * as Appcues from '@appcues/react-native';
 import UserContext from '../../contexts/UserContext';
 import { FilledButton, PlainButton } from '../../components/Button';
 import Text from '../../components/Text';
 import TextInput from '../../components/TextInput';
+import { useAnalytics } from '@segment/analytics-react-native';
+import * as Appcues from '@appcues/react-native';
 
 export default function SignInScreen() {
   const { userID, setUserID } = useContext(UserContext);
   const navigation = useNavigation();
+  const { identify, screen } = useAnalytics();
 
   useFocusEffect(
     React.useCallback(() => {
-      Appcues.screen('Sign In');
+      screen('Sign In');
     }, [])
   );
 
@@ -37,7 +39,7 @@ export default function SignInScreen() {
         <FilledButton
           title="Sign In"
           onPress={() => {
-            Appcues.identify(userID);
+            identify(userID);
             setUserID(userID);
             navigation.navigate('Main');
           }}

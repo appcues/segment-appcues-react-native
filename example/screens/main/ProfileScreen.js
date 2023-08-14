@@ -7,13 +7,16 @@ import UserContext from '../../contexts/UserContext';
 import { FilledButton, PlainButton } from '../../components/Button';
 import Text from '../../components/Text';
 import TextInput from '../../components/TextInput';
+import { useAnalytics } from '@segment/analytics-react-native';
 
 const Stack = createNativeStackNavigator();
 
 const ProfileView = () => {
+  const { identify, screen, reset } = useAnalytics();
+
   useFocusEffect(
     React.useCallback(() => {
-      Appcues.screen('Update Profile');
+      screen('Update Profile');
     }, [])
   );
 
@@ -48,7 +51,7 @@ const ProfileView = () => {
       <FilledButton
         title="Save"
         onPress={() => {
-          Appcues.identify(
+          identify(
             userID,
             removeEmpty({ givenName: givenName, familyName: familyName })
           );
@@ -77,7 +80,7 @@ export default function ProfileScreen() {
             <PlainButton
               title="Sign Out"
               onPress={() => {
-                Appcues.reset();
+                reset();
                 setUserID(null);
                 navigation.pop();
               }}

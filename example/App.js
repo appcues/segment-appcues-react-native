@@ -7,8 +7,19 @@ import UserContext from './contexts/UserContext';
 import SignInScreen from './screens/signin/SignInScreen';
 import MainScreen from './screens/main/MainScreen';
 import { PlainButton } from './components/Button';
+import { AppcuesPlugin } from '@appcues/segment-react-native';
+import {
+  createClient,
+  AnalyticsProvider,
+} from '@segment/analytics-react-native';
 
 const RootStack = createNativeStackNavigator();
+
+const segmentClient = createClient({
+  writeKey: 'SEGMENT_WRITE_KEY'
+});
+
+segmentClient.add({plugin: new AppcuesPlugin() })
 
 export default function App() {
   // App state for current user ID, which is used in the
@@ -16,24 +27,16 @@ export default function App() {
   // in the view hierarchy (sign in screen, profile screen)
   const [userID, setUserID] = useState('default-00000');
 
-  // Ensures that first _real_ render of the app doesn't occur until
-  // SDK init complete - to avoid screen view analytics before SDK is ready
-  const [initComplete, setInitComplete] = useState(false);
-
-  useEffect(() => {
-    const initializeSdk = async () => {
-      await Appcues.setup('APPCUES_ACCOUNT_ID', 'APPCUES_APPLICATION_ID');
-      setInitComplete(true);
-    };
-    initializeSdk();
-  }, []);
 
   return (
-    <UserContext.Provider value={{ userID, setUserID }}>
-      {initComplete && <RootView />}
-    </UserContext.Provider>
+    <AnalyticsProvider client={segmentClient}>
+      <UserContext.Provider value={{ userID, setUserID }}>
+        <RootView />
+      </UserContext.Provider>
+    </AnalyticsProvider>
   );
 }
+
 
 function RootView() {
   return (
