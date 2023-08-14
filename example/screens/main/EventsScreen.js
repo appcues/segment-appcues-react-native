@@ -4,13 +4,16 @@ import { useFocusEffect } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Appcues from '@appcues/react-native';
 import { TintedButton, PlainButton } from '../../components/Button';
+import { useAnalytics } from '@segment/analytics-react-native';
 
 const Stack = createNativeStackNavigator();
 
 const EventsView = () => {
+  const { track, screen } = useAnalytics();
+
   useFocusEffect(
     React.useCallback(() => {
-      Appcues.screen('Trigger Events');
+      screen('Trigger Events');
     }, [])
   );
 
@@ -27,12 +30,12 @@ const EventsView = () => {
       <TintedButton
         title="Trigger Event 1"
         nativeID="btnEvent1"
-        onPress={() => Appcues.track('event1')}
+        onPress={() => track('event1')}
       />
       <TintedButton
         title="Trigger Event 2"
         nativeID="btnEvent2"
-        onPress={() => Appcues.track('event2')}
+        onPress={() => track('event2')}
       />
     </View>
   );

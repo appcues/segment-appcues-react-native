@@ -6,13 +6,16 @@ import * as Appcues from '@appcues/react-native';
 import { FilledButton } from '../../components/Button';
 import Text from '../../components/Text';
 import TextInput from '../../components/TextInput';
+import { useAnalytics } from '@segment/analytics-react-native';
 
 const Stack = createNativeStackNavigator();
 
 const GroupView = () => {
+  const { group, screen } = useAnalytics();
+
   useFocusEffect(
     React.useCallback(() => {
-      Appcues.screen('Update Group');
+      screen('Update Group');
     }, [])
   );
 
@@ -38,7 +41,7 @@ const GroupView = () => {
       <FilledButton
         title="Save"
         onPress={() => {
-          Appcues.group(groupID, { test_user: true });
+          group(groupID, { test_user: true });
           onChangeGroupID(null);
         }}
         nativeID="btnSaveGroup"
