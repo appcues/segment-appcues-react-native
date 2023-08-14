@@ -26,10 +26,10 @@ We will only accept a pull request for which all tests pass. Make sure the follo
 
 ## Getting started
 
-1. Clone `appcues-react-native-module` locally:
+1. Clone `segment-appcues-react-native` locally:
 
     ```bash
-    git clone https://github.com/appcues/appcues-react-native-module.git
+    git clone https://github.com/appcues/segment-appcues-react-native.git
     ```
 
    If you cloned a while ago, get the latest changes from upstream:
@@ -114,10 +114,6 @@ Remember to add tests for your change if possible. Run the unit tests by:
 yarn test
 ```
 
-To edit the Objective-C files, open `example/ios/AppcuesReactNativeExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > appcues-react-native`.
-
-To edit the Kotlin files, open `example/android` in Android studio and find the source files at `appcuesreactnative` under `Android`.
-
 ### Commit messages
 
 Commit messages should follow the pattern `:emoji: Imperative commit message`. See [How to Write an Imperative Message](https://chris.beams.io/posts/git-commit/#imperative) for a great explanation.
@@ -151,7 +147,7 @@ Commit messages should follow the pattern `:emoji: Imperative commit message`. S
 
 - Maintainers, and potentially other committers, may comment on the changes and suggest modifications. Changes can be added by simply pushing more commits to the same branch.
 - Lively, polite, rapid technical debate is encouraged from everyone in the community. The outcome may be a rejection of the entire change.
-- Keep in mind that changes to more critical parts of `appcues-react-native-plugin` will be subjected to more review, and may require more testing and proof of its correctness than other changes.
+- Keep in mind that changes to more critical parts of `segment-appcues-react-native` will be subjected to more review, and may require more testing and proof of its correctness than other changes.
 - The person who starts the discussion should be the person who resolves the discussion.
 - In order to pass review your PR will need approval from at least one maintainer.
 

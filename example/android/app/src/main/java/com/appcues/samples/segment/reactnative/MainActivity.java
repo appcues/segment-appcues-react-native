@@ -1,4 +1,4 @@
-package com.appcues.samples.reactnative;
+package com.appcues.samples.segment.reactnative;
 
 import android.os.Bundle;
 
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "AppcuesReactNativeExample";
+    return "SegmentAppcuesReactNativeExample";
   }
 
   // https://github.com/software-mansion/react-native-screens/issues/17#issuecomment-424704067
