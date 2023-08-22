@@ -7,11 +7,15 @@ This is a simple Android and iOS app built with React Native that integrates wit
 Refer to https://reactnative.dev/docs/environment-setup for general React Native setup. This example project uses the React Native CLI.
 
 ```sh
+# Install dependencies for the plugin. Only necessary because this is referenced locally by the example app.
+# Ignore any TypeScript build errors, these are due to Segment and Appcues dependencies being peerDependencies.
+yarn install
+
 # Install dependencies for the example app.
 cd ./example
 yarn install
 
-# Install cocoapods
+# Install CocoaPods
 cd ./iOS
 pod install
 ```
