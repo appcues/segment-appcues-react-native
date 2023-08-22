@@ -32,6 +32,15 @@ export class AppcuesPlugin extends DestinationPlugin {
 
         Appcues.setup(appcuesSettings.accountId, appcuesSettings.applicationId)
             .then(() => { this.isInitialized = true; });
+
+        // TODO: once the 3.0.0 react native plugin is released, apply the additionalAutoProperties
+        //       here to denote in the data which usage is from this segment plugin
+        //
+        // Appcues.setup(appcuesSettings.accountId, appcuesSettings.applicationId, {
+        //     additionalAutoProperties: {
+        //         _segmentVersion: require('@segment/analytics-react-native/package.json').version
+        //     }            
+        // }).then(() => { this.isInitialized = true; });
     }
   
     identify(event: IdentifyEventType) {
