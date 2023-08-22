@@ -37,6 +37,10 @@ const segmentClient = createClient({
 segmentClient.add({ plugin: new AppcuesPlugin() });
 ```
 
+## Supporting Builder Preview and Screen Capture
+
+During installation, follow the steps outlined in in the Appcues React Native Module documentation for [Configuring the Appcues URL Scheme](https://github.com/appcues/appcues-react-native-module/blob/main/docs/URLSchemeConfiguring.md). This is necessary for the complete Appcues builder experience, supporting experience preview, screen capture and debugging.
+
 ## Support
 
 Please use Github issues, Pull Requests, or feel free to reach out to our [support team](support@appcues.com).
