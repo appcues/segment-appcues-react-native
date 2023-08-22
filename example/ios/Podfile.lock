@@ -365,7 +365,7 @@ PODS:
     - React-RCTImage
   - RNVectorIcons (9.2.0):
     - React-Core
-  - segment-analytics-react-native (2.15.0):
+  - segment-analytics-react-native (2.16.0):
     - React-Core
     - sovran-react-native
   - SocketRocket (0.6.0)
@@ -593,7 +593,7 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: f57e929cd7757f2cb3dd8186d123c09e8281a1ad
   RNScreens: b21dc57dfa2b710c30ec600786a3fc223b1b92e7
   RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
-  segment-analytics-react-native: 2b90f606cda9234dd110d117c4ffc918d9ba29bb
+  segment-analytics-react-native: 6aec6112871b0574e6b881cddee3d6459a3181d3
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   sovran-react-native: 791f2f726b4d57ece59676eda58d6da9dc95ad4e
   Yoga: 7a4d48cfb35dfa542151e615fa73c1a0d88caf21

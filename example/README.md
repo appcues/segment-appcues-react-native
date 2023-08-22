@@ -8,12 +8,11 @@ Refer to https://reactnative.dev/docs/environment-setup for general React Native
 
 ```sh
 # Install dependencies for the plugin. Only necessary because this is referenced locally by the example app.
-# Ignore any TypeScript build errors, these are due to Segment and Appcues dependencies being peerDependencies.
-yarn install
+npm install
 
 # Install dependencies for the example app.
 cd ./example
-yarn install
+npm install
 
 # Install CocoaPods
 cd ./iOS
@@ -23,11 +22,14 @@ pod install
 This example app requires you to have configured an Appcues Mobile destination for your app source in the [Segment dashboard](https://app.segment.com/). The Segment React Native SDK is then initialized with the write key that is tied to this source. Once the configuration is completed, analytics sent to Segment will automatically be forwarded through to Appcues.
 
 ```sh
+# Start bundler
+npx react-native start
+
 # Run the app for Android
-yarn android
+npx react-native run-android
 
 # Run the app for iOS
-yarn ios
+npx react-native run-ios
 ```
 
 ## ✨ Functionality
