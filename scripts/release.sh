@@ -44,7 +44,7 @@ fi
 # remove quotes
 version=$(npm pkg get version | sed 's/"//g')
 
-echo "Appcues module current version: $version"
+echo "Segment Appcues plugin current version: $version"
 
 # no args, so give usage.
 if [ $# -eq 0 ]
