@@ -16,7 +16,7 @@ import {
 const RootStack = createNativeStackNavigator();
 
 const segmentClient = createClient({
-  writeKey: 'SEGMENT_WRITE_KEY'
+  writeKey: 'IOskaNe7hQSJfB8ATS08Pjp07gIgU1iH'
 });
 
 segmentClient.add({plugin: new AppcuesPlugin() })
