@@ -19,7 +19,7 @@ const segmentClient = createClient({
   writeKey: 'SEGMENT_WRITE_KEY'
 });
 
-segmentClient.add({plugin: new AppcuesPlugin() })
+segmentClient.add({ plugin: new AppcuesPlugin() });
 
 export default function App() {
   // App state for current user ID, which is used in the
