@@ -16,7 +16,7 @@ import {
 const RootStack = createNativeStackNavigator();
 
 const segmentClient = createClient({
-  writeKey: 'SEGMENT_WRITE_KEY'
+  writeKey: 'SEGMENT_WRITE_KEY',
 });
 
 segmentClient.add({ plugin: new AppcuesPlugin() });
@@ -27,7 +27,6 @@ export default function App() {
   // in the view hierarchy (sign in screen, profile screen)
   const [userID, setUserID] = useState('default-00000');
 
-
   return (
     <AnalyticsProvider client={segmentClient}>
       <UserContext.Provider value={{ userID, setUserID }}>
@@ -36,7 +35,6 @@ export default function App() {
     </AnalyticsProvider>
   );
 }
-
 
 function RootView() {
   return (

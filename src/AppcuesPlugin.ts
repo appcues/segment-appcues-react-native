@@ -1,73 +1,76 @@
 import {
-    DestinationPlugin,
-    PluginType,
-    TrackEventType,
-    ScreenEventType,
-    SegmentAPISettings,
-    UpdateType,
-    IdentifyEventType,
-    GroupEventType
-  } from '@segment/analytics-react-native';
-  import type { SegmentAppcuesSettings } from './types';
-  import * as Appcues from '@appcues/react-native';
-  
-export class AppcuesPlugin extends DestinationPlugin {    
-    type = PluginType.destination;
-    key = 'Appcues Mobile';
+  DestinationPlugin,
+  PluginType,
+  TrackEventType,
+  ScreenEventType,
+  SegmentAPISettings,
+  UpdateType,
+  IdentifyEventType,
+  GroupEventType,
+} from '@segment/analytics-react-native';
+import type { SegmentAppcuesSettings } from './types';
+import * as Appcues from '@appcues/react-native';
 
-    private isInitialized: boolean = false;
-  
-    async update(settings: SegmentAPISettings, _: UpdateType) {
-        if (this.isInitialized) {
-            return
-        }
-       
-        const appcuesSettings = settings.integrations[
-            this.key
-        ] as SegmentAppcuesSettings;
-  
-        if (appcuesSettings === undefined) {
-            return;
-        }
+export class AppcuesPlugin extends DestinationPlugin {
+  type = PluginType.destination;
+  key = 'Appcues Mobile';
 
-        Appcues.setup(appcuesSettings.accountId, appcuesSettings.applicationId, {
-            additionalAutoProperties: {
-                _segmentVersion: require('@segment/analytics-react-native/package.json').version
-            }            
-        }).then(() => { this.isInitialized = true; });
+  private isInitialized: boolean = false;
+
+  async update(settings: SegmentAPISettings, _: UpdateType) {
+    if (this.isInitialized) {
+      return;
     }
-  
-    identify(event: IdentifyEventType) {
-        if (this.isInitialized && event.userId != null) {
-            Appcues.identify(event.userId, event.traits);
-        }
-        return event;
+
+    const appcuesSettings = settings.integrations[
+      this.key
+    ] as SegmentAppcuesSettings;
+
+    if (appcuesSettings === undefined) {
+      return;
     }
-  
-    track(event: TrackEventType) {  
-        if (this.isInitialized) {
-            Appcues.track(event.event, event.properties);
-        }
-        return event;
+
+    Appcues.setup(appcuesSettings.accountId, appcuesSettings.applicationId, {
+      additionalAutoProperties: {
+        _segmentVersion: require('@segment/analytics-react-native/package.json')
+          .version,
+      },
+    }).then(() => {
+      this.isInitialized = true;
+    });
+  }
+
+  identify(event: IdentifyEventType) {
+    if (this.isInitialized && event.userId != null) {
+      Appcues.identify(event.userId, event.traits);
     }
-  
-    screen(event: ScreenEventType) {
-        if (this.isInitialized) {
-            Appcues.screen(event.name, event.properties);
-        }
-      return event;
+    return event;
+  }
+
+  track(event: TrackEventType) {
+    if (this.isInitialized) {
+      Appcues.track(event.event, event.properties);
     }
-  
-    group(event: GroupEventType) {
-        if (this.isInitialized) {
-            Appcues.group(event.groupId, event.traits);
-        }
-        return event;
+    return event;
+  }
+
+  screen(event: ScreenEventType) {
+    if (this.isInitialized) {
+      Appcues.screen(event.name, event.properties);
     }
-  
-    reset(): void {
-        if (this.isInitialized) {
-            Appcues.reset()
-        }
+    return event;
+  }
+
+  group(event: GroupEventType) {
+    if (this.isInitialized) {
+      Appcues.group(event.groupId, event.traits);
     }
+    return event;
+  }
+
+  reset(): void {
+    if (this.isInitialized) {
+      Appcues.reset();
+    }
+  }
 }
