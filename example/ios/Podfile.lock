@@ -1,7 +1,7 @@
 PODS:
-  - Appcues (3.1.6)
-  - appcues-react-native (3.1.11):
-    - Appcues (~> 3.1.6)
+  - Appcues (3.1.7)
+  - appcues-react-native (3.1.12):
+    - Appcues (~> 3.1.7)
     - React-Core
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
@@ -656,8 +656,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Appcues: 1781b206a38860b89fa4d586c63d6fbd5a8caa66
-  appcues-react-native: 63cbb9a7b44e39d5f99cbfc10bf5d3be544a8a66
+  Appcues: b97e55a9ee6c449adffedfc3778bf0ce829adda8
+  appcues-react-native: cc3354b45f1208da7e4dfe9cb29a481babc403f7
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
