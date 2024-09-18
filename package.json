@@ -42,7 +42,7 @@
   },
   "peerDependencies": {
     "@segment/analytics-react-native": "*",
-    "@appcues/react-native": "^3.3.0"
+    "@appcues/react-native": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
