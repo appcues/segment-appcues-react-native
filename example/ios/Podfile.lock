@@ -1,7 +1,7 @@
 PODS:
   - Appcues (4.3.6)
-  - appcues-react-native (4.4.0):
-    - Appcues (~> 4.3.5)
+  - appcues-react-native (4.4.1):
+    - Appcues (~> 4.3.6)
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1444,7 +1444,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Appcues: 758c68c206d5329da909f93e79039c1a6332467e
-  appcues-react-native: 79d573ac6ea295e0fa248315cf3b8c3c76e74e4c
+  appcues-react-native: eb10446134260e14ae550c17e77cdabb840426d4
   boost: d3f49c53809116a5d38da093a8aa78bf551aed09
   DoubleConversion: 76ab83afb40bddeeee456813d9c04f67f78771b5
   FBLazyVector: 898d14d17bf19e2435cafd9ea2a1033efe445709
