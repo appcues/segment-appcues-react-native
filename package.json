@@ -21,6 +21,7 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
     "release": "./scripts/release.sh",
+    "upgrade": "./scripts/upgrade.sh",
     "pods": "cd example && pod-install --quiet"
   },
   "keywords": [

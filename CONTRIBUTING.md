@@ -149,6 +149,10 @@ Commit messages should follow the pattern `:emoji: Imperative commit message`. S
 - The person who starts the discussion should be the person who resolves the discussion.
 - In order to pass review your PR will need approval from at least one maintainer.
 
+## Version bumps
+
+The most frequent change in this repository is upgrading the dependency on @appcues/react-native. To make this easy, run `npm run upgrade <target-version>`, where `<target-version>` is the version of @appcues/react-native `to upgrade to.
+
 ## Releasing
 
 You must be a repository admin and member of the Appcues npm organization. From a clean copy of the `main` branch:
