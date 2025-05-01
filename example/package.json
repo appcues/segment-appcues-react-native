@@ -1,7 +1,7 @@
 {
   "name": "segment-appcues-react-native-example",
   "description": "Example app for segment-appcues-react-native",
-  "version": "4.4.1",
+  "version": "4.4.3",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
