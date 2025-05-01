@@ -42,8 +42,8 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@segment/analytics-react-native": "*",
-    "@appcues/react-native": "^4.4.2"
+    "@appcues/react-native": "^4.4.3",
+    "@segment/analytics-react-native": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
