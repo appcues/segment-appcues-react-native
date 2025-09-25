@@ -1,7 +1,7 @@
 PODS:
-  - Appcues (4.3.10)
-  - appcues-react-native (4.4.5):
-    - Appcues (~> 4.3.9)
+  - Appcues (5.0.0)
+  - appcues-react-native (5.0.0):
+    - Appcues (~> 5.0.0)
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1443,8 +1443,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Appcues: ea6ee99e101cb7374f57508938113b36c0e4748a
-  appcues-react-native: 18f91d76bb184531715fe68a3c35516944ec9a21
+  Appcues: d04033bf9e6a6f9803a2f6e466f0a433010a1a87
+  appcues-react-native: 7103f6ddd5746736e0e5775e93c00d2b171bee5e
   boost: d3f49c53809116a5d38da093a8aa78bf551aed09
   DoubleConversion: 76ab83afb40bddeeee456813d9c04f67f78771b5
   FBLazyVector: 898d14d17bf19e2435cafd9ea2a1033efe445709
