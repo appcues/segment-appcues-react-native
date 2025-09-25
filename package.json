@@ -42,7 +42,7 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@appcues/react-native": "^4.4.4",
+    "@appcues/react-native": "^4.4.5",
     "@segment/analytics-react-native": "*"
   },
   "devDependencies": {

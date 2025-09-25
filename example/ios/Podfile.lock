@@ -1,6 +1,6 @@
 PODS:
-  - Appcues (4.3.9)
-  - appcues-react-native (4.4.4):
+  - Appcues (4.3.10)
+  - appcues-react-native (4.4.5):
     - Appcues (~> 4.3.9)
     - DoubleConversion
     - glog
@@ -1443,8 +1443,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Appcues: c539f8b09b0ba42627b6016887c520a194c7afbc
-  appcues-react-native: eaf1512102679d05cdf3c6830abdb4c01c62ec75
+  Appcues: ea6ee99e101cb7374f57508938113b36c0e4748a
+  appcues-react-native: 18f91d76bb184531715fe68a3c35516944ec9a21
   boost: d3f49c53809116a5d38da093a8aa78bf551aed09
   DoubleConversion: 76ab83afb40bddeeee456813d9c04f67f78771b5
   FBLazyVector: 898d14d17bf19e2435cafd9ea2a1033efe445709
