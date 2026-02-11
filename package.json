@@ -1,6 +1,6 @@
 {
   "name": "@appcues/segment-react-native",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Segment destination plugin for Appcues.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
