@@ -32,22 +32,22 @@ export default function MainScreen() {
       <Tab.Screen
         name="Events"
         component={EventsScreen}
-        options={{ title: 'Events', tabBarTestID: 'tabEvents' }}
+        options={{ title: 'Events', tabBarButtonTestID: 'tabEvents' }}
       />
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
-        options={{ title: 'Profile', tabBarTestID: 'tabProfile' }}
+        options={{ title: 'Profile', tabBarButtonTestID: 'tabProfile' }}
       />
       <Tab.Screen
         name="Group"
         component={GroupScreen}
-        options={{ title: 'Group', tabBarTestID: 'tabGroup' }}
+        options={{ title: 'Group', tabBarButtonTestID: 'tabGroup' }}
       />
       <Tab.Screen
         name="Embed"
         component={EmbedScreen}
-        options={{ title: 'Embed', tabBarTestID: 'tabEmbed' }}
+        options={{ title: 'Embed', tabBarButtonTestID: 'tabEmbed' }}
       />
     </Tab.Navigator>
   );

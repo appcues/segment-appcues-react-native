@@ -47,6 +47,7 @@ function RootView() {
           background: `#FFFFFF`,
           border: `#FFFFFF`,
         },
+        fonts: DefaultTheme.fonts,
       }}
     >
       <RootStack.Navigator>
