@@ -7,11 +7,13 @@
 You need to install the `@appcues/segment-react-native` and the `@appcues/react-native` dependency.
 
 Using NPM:
+
 ```bash
 npm install --save @appcues/segment-react-native @appcues/react-native
 ```
 
 Using Yarn:
+
 ```bash
 yarn add @appcues/segment-react-native @appcues/react-native
 ```
@@ -19,6 +21,7 @@ yarn add @appcues/segment-react-native @appcues/react-native
 Run `pod install` after the installation to autolink the Appcues SDK.
 
 See [Appcues React Native Module](https://github.com/appcues/appcues-react-native-module) for more details of this dependency.
+
 ## Usage
 
 Follow the [instructions for adding plugins](https://github.com/segmentio/analytics-react-native#adding-plugins) on the main Analytics client:
@@ -31,10 +34,21 @@ import { createClient } from '@segment/analytics-react-native';
 import { AppcuesPlugin } from '@appcues/segment-react-native';
 
 const segmentClient = createClient({
-  writeKey: 'SEGMENT_KEY'
+  writeKey: 'SEGMENT_KEY',
 });
 
 segmentClient.add({ plugin: new AppcuesPlugin() });
+```
+
+You can optionally pass configuration options to the plugin that will be forwarded to the underlying `@appcues/react-native` SDK during initialization. For example, to configure for EU data residency:
+
+```ts
+segmentClient.add({
+  plugin: new AppcuesPlugin({
+    apiHost: 'https://api.eu.appcues.net',
+    settingsHost: 'https://fast.eu.appcues.com',
+  }),
+});
 ```
 
 ## Supporting Builder Preview and Screen Capture
