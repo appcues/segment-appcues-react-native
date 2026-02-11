@@ -8,7 +8,7 @@ import {
   IdentifyEventType,
   GroupEventType,
 } from '@segment/analytics-react-native';
-import type { SegmentAppcuesSettings } from './types';
+import type { AppcuesPluginOptions, SegmentAppcuesSettings } from './types';
 import * as Appcues from '@appcues/react-native';
 
 export class AppcuesPlugin extends DestinationPlugin {
@@ -16,6 +16,12 @@ export class AppcuesPlugin extends DestinationPlugin {
   key = 'Appcues Mobile';
 
   private isInitialized: boolean = false;
+  private options: AppcuesPluginOptions;
+
+  constructor(options?: AppcuesPluginOptions) {
+    super();
+    this.options = options ?? {};
+  }
 
   async update(settings: SegmentAPISettings, _: UpdateType) {
     if (this.isInitialized) {
@@ -31,6 +37,7 @@ export class AppcuesPlugin extends DestinationPlugin {
     }
 
     Appcues.setup(appcuesSettings.accountId, appcuesSettings.applicationId, {
+      ...this.options,
       additionalAutoProperties: {
         _segmentVersion: require('@segment/analytics-react-native/package.json')
           .version,
