@@ -1,12 +1,12 @@
 import {
   DestinationPlugin,
   PluginType,
-  TrackEventType,
-  ScreenEventType,
-  SegmentAPISettings,
-  UpdateType,
-  IdentifyEventType,
-  GroupEventType,
+  type TrackEventType,
+  type ScreenEventType,
+  type SegmentAPISettings,
+  type UpdateType,
+  type IdentifyEventType,
+  type GroupEventType,
 } from '@segment/analytics-react-native';
 import type { AppcuesPluginOptions, SegmentAppcuesSettings } from './types';
 import * as Appcues from '@appcues/react-native';
