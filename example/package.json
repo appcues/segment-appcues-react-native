@@ -9,7 +9,7 @@
     "start": "react-native start"
   },
   "dependencies": {
-    "@appcues/react-native": "^5.0.5",
+    "@appcues/react-native": "^5.0.6",
     "@appcues/segment-react-native": "file:..",
     "@react-native-async-storage/async-storage": "^2.0.0",
     "@react-navigation/bottom-tabs": "^7.2.0",
